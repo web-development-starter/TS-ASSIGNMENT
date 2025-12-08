@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+    body{
+        margin: 0px;
+        padding:0px;
+        box-sizing: border-box;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    }
+    ::placeholder{
+        color:  rgb(51, 47, 47);
+        font-weight: bold;
+    }
+    .container{
+        width: 100%;
+        height: 100vh;
+        background-image: url(photogrid/white\ \(7\).jpeg);
+        background-position: center;
+        background-size: cover;
+    }
+    .container .content{
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: rgba(87, 77, 77, 0.2);
+        box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.9);
+        border-radius: 20px;
+    }
+    .content .nav{
+        border-radius: 10px 10px 0px 0px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .nav .left{
+        padding: 15px;
+        padding-right: 40px;
+        display: flex;
+        gap: 30px;
+        border-radius: 10px 0px;
+        background-color: rgb(152, 181, 206);
+    }
+    .nav i{
+        font-size: 20px;
+    }
+    .nav a{
+        color: rgb(51, 47, 47);
+        font-size: 14px;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    .nav a:hover{
+        color: rgb(20, 2, 2);
+    }
+
+    .nav .right{
+        display: flex;
+    }
+    .right input{
+        position: relative;
+        top: 13px;
+        left: 10px;
+        outline: none;
+        font-size: 15px;
+        color: rgb(51, 47, 47);
+        background: none;
+        border: none;
+        border-bottom: 2px solid rgb(51, 47, 47);
+    }
+    .right i{
+        position: relative;
+        top: 10px;
+        left: -12px;
+    }
+    .container .main{
+        padding: 25px;
+        display: flex;
+        gap: 30px;
+        position: relative;
+        top: 0px;
+        left: 0px;
+
+    }
+    .main .left, .main .middles{
+        border: 2px solid rgb(70, 101, 128);
+        border-radius: 10px;
+        padding: 5px;
+    }
+    .main .left h2, .main .middles h2{
+        margin: 6px;
+        text-align: center;
+        color: rgb(70, 101, 128);
+    }
+    .main .left label{
+        font-size: 14px;
+        font-weight: bolder;
+    }
+    .main .left input{
+        margin: 15px 0px 15px 0px;
+        border: none;
+        outline: none;
+        background: none;
+        border-bottom: 2px solid  rgb(51, 47, 47);
+        color:  rgb(51, 47, 47);
+        font-weight: bold;
+    }
+    .main .left a{
+        display: block;
+        font-size: 16px;
+        font-weight: bold;
+        text-decoration: none;
+        color: rgb(32, 107, 168);
+    }
+     .main .left a:hover{
+        color: rgb(71, 128, 175);
+     }
+     .main .left button{
+        display: block;
+        margin: 32px auto 0px;
+        padding: 5px 15px;
+        font-size: 16px;
+        font-weight: bold;
+        border-radius: 7px;
+        border: none;
+        background-color: rgb(152, 181, 206);
+     }
+     .main .middles{
+        margin-right: 70px;
+     }
+     .main .middles p{
+        color: rgb(51, 47, 47);
+        font-weight: bold;
+     }
+    .main .middles .middle-end{
+        display: block;
+        align-items: center;
+        justify-content: space-evenly;
+        margin: 0px auto;
+    }
+     .main .middles button{
+        margin-left: 7px;
+        padding: 5px 6px;
+        font-size: 14px;
+        font-weight: bold;
+        border-radius: 7px;
+        border: none;
+        background-color: rgb(152, 181, 206);
+     }
+
+     .content .right-end{
+        background-color: rgb(152, 181, 206);
+        height: 200px;
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+        border-radius: 10px 0px;
+     }
+     .content .right-end ul{
+        padding: 0px 14px;
+          margin: 0px;
+        list-style: none;
+     }
+     .right-end ul li{
+        padding-top: 20px;
+     }
+      .right-end ul li i{
+        font-size: 25px;
+         color: rgb(51, 47, 47);
+      }
+
+    </style>
+</head>
+<body>
+<div class="container">
+<div class="content">
+<div class="nav">
+<div class="left">
+<i class="fa-solid fa-bars"></i>
+<a href="home">HOME</a>
+<a href="about">ABOUT</a>
+<a href="service">SERVICE</a>
+<a href="contact">CONTACT</a>
+</div>
+<div class="right">
+<input type="search" id="search" placeholder="Type to search">
+<i class="fa-solid fa-magnifying-glass"></i>
+</div>
+</div>
+
+<div class="main">
+<div class="left">
+<h2>LOGIN</h2>
+<div class="top">
+<LAbel for="email">Email or phone no:</LAbel>
+<input type="email" type="tel" name="email" id="email" placeholder="Enter Email or password">
+</div>
+
+<div class="middle">
+<LAbel for="password">Password:</LAbel>
+<input type="password" name="password" id="password" placeholder="Enter password">
+</div>
+<div class="end">
+<a href="#">forget Password</a>
+<button>LOGIN</button>
+</div>
+</div>
+
+<div class="middles">
+<h2>Welcome Everyone</h2>
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo quo beatae qui consequuntur labore. Obcaecati, aliquid. Atque nam dolor sint? Voluptates esse inventore dolor iusto repellat saepe facere, aspernatur rerum?</p>
+<div class="middle-end">
+<button>Like page</button>
+<button>Learn more</button>
+<button>Follow us</button>
+</div>
+</div>
+
+<div class="right-end">
+<ul>
+<li>
+<i class="fa-brands fa-facebook"></i>
+</li>
+<li>
+<i class="fa-brands fa-instagram"></i>
+</li>
+<li>
+<i class="fa-brands fa-linkedin"></i>
+</li>
+<li>
+<i class="fa-brands fa-twitter"></i>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>

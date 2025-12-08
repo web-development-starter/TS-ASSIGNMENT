@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <style>
+        body{
+            margin: 30px;
+            padding: 0px;
+            background-image: url(./img/mountain.jpeg);
+            background-position: contain;
+            background-repeat: no-repeat;
+            height: 100vh;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        h1 {
+            font-size: 30px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: bolder;
+            color: red;
+            margin: 0px;
+        }
+        .earth-logo{
+            font-size: 14px;       
+        }
+        ul{
+            list-style-type: none;
+            margin: 10px;   
+                
+        }
+        li{
+            display: inline-block;
+            margin-inline: 20px;
+        }
+        a{
+            color: rgb(41, 27, 4);;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+        }
+        .nav-Bar{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 100px;    
+        }
+
+        .search-Bar{
+            margin: -25px;
+            position: relative;
+        }
+        .input-logo{
+            width: 300px;
+            font-size: 18px;
+            border-radius: 3px;
+            border: 1px solid bisque;
+        }
+        .search {
+            width: 80px;
+            height: 40px;
+            position: absolute;
+            top: 21px;
+            right: 0px;
+            background-color: rgb(41, 27, 4);
+            color: aliceblue;
+            border: none;
+            border-radius: 0 3px 3px 0;
+            font-weight: bold;
+        }
+        .text {
+            color: rgb(41, 27, 4);
+            font-size: 45px;
+        }
+        .front {
+            font-size: 50px;
+            color: red;
+        }
+        p{
+        color: rgb(10, 6, 0);
+        font-size: larger;
+        font-weight: bold;
+        }
+        .join {
+            width: 100px;
+            height: 40px;
+            font-weight: bolder;
+            border-radius: 4px;
+            border: none;
+            background-color: red;
+            color: aliceblue;
+        }
+        .login{
+        padding: 20px;
+        width: 250px;
+        border: none;
+        border-radius: 20px;
+        text-align: center;
+        line-height: 30px;
+        background-color: black;
+       }
+       h2{
+        background-color: aliceblue;
+        border-radius: 8px;
+        font-weight: bold;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        padding: 4px;
+       }
+       input{
+        margin-top: 20px;
+        padding: 10px;
+        border: none;
+        background: none;
+        border-bottom: 1px solid papayawhip;
+        font-size: 14px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-weight: bold;
+        color: aliceblue;
+       }
+
+       .type::placeholder{
+        color: aliceblue;
+       }
+       .login-button{
+        margin-top: 20px;
+        width: 170px;
+        height: 35px;
+        font-size: 20px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-weight: bold;
+        border-radius: 10px;
+        border: none;
+       }
+       .sign{
+        color:  papayawhip;
+        margin-bottom: 0px;
+        line-height: 16px;
+        font-size: 15px;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-weight: bold;
+        border-radius: 10px;
+        border: none;
+       }
+       .span{
+        color: red;
+       }
+       .detail-login{
+        margin-top: 5px;
+        color: aliceblue;
+       }
+       .icon-fa{
+        display: flex;
+        text-align: center;
+        justify-content: space-around;
+        color: aliceblue;
+       }
+      .total {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      } 
+    </style>
+</head>
+<body>
+    
+        <section class="nav-Bar">
+            <div class="logo-Bar">
+               <h1 >PraROZ<span class="earth-logo">&#127765;</span></h1>
+            </div>
+            <div list-Bar>
+               <ul>
+                  <li><a href="">HOME</a></li>
+                  <li><a href="">ABOUT</a></li>
+                  <li><a href="">SERVICE</a></li>
+                  <li><a href="">DESIGN</a></li>
+                  <li><a href="">CONTACT</a></li>
+               </ul>
+            </div>
+            <div class="search-Bar">
+              <input type="text" placeholder="type of search" class="input-logo"> 
+              <button class="search">search</button>
+            </div>
+        </section>
+
+    <div class="total">
+        <section class="group">
+          <div class="page-writeup">
+            <h1 class="text">Web Design & <br><span class="front">Development</span>
+            <br> Course</h1>
+            <p>web design is a specification of the design. they also use HTML, <br>CSS.WYSIWYG editing software, markup validdation e.t.c <br> to createdesign element.</p>
+            <button class="join">JOIN US</button>
+            </section>
+
+    
+          <section class="login">
+                <h2>Login Here</h1>
+                <input type="text" placeholder="Enter email here" class="type">
+                <br>
+                <input type="text" placeholder="Enter Password here" class="type">
+                <br>
+                <button class="login-button">login</button>
+                <p class="sign">Don't have an account? <br>
+                    <span class="span">Sign up</span> here.
+                </p>
+                <p class="detail-login">log in with</p>
+
+                <div class="icon-fa">
+                <i class="fa-brands fa-facebook icon"></i>
+                <i class="fa-brands fa-google icon"></i>
+                <i class="fa-brands fa-twitter icon"></i>
+                <i class="fa-brands fa-instagram icon"></i>
+                <i class="fa-brands fa-tiktok icon"></i>
+                </div>
+
+            </section>
+    </div>
+</body>
+</html>

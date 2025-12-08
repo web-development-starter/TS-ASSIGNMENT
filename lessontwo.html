@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>button</title>
+    <style>
+        .subcribe-button{
+            background-color: rgb(180, 23, 23);
+            width: 108px;
+            height: 36px;
+            color: white;
+            border-style: none;
+            border-radius: 2px;
+            margin-right: 8px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: opacity 0.15s;
+        }
+
+        .subcribe-button:hover{
+            opacity: 0.7;
+        }
+        .subcribe-button:active{
+            opacity: 0.5;
+        }
+
+        .join-button{
+            background-color: none;
+            color:rgb(95, 95, 212);
+            border: 2px solid rgb(95, 95, 212);
+            border-radius: 3px;
+            width: 60px;
+            height: 36px;
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.15s, color 0.15s, opacity 0.15s,
+        }
+        
+        .join-button:hover{
+            background-color: rgb(95, 95, 212);
+            color: white;
+        }
+
+        .join-button:active{
+            opacity: 0.7;
+        }
+
+        .tweet-button{
+            margin-left: 8px;
+            width: 80px;
+            height: 36px;
+            background-color: rgb(139, 166, 224);
+            color: white;
+            border-style: none;
+            border-radius: 18px;
+            font-size: 18px;
+            font-weight: bold;
+            transition: box-shadow 0.15s, opacity 0.15s;
+        }
+        .tweet-button:hover {
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.2);
+        }
+        .tweet-button:active{
+            opacity: 0.8;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4);
+        }
+    </style>
+</head>
+<body>
+    <button class="subcribe-button">Subcribe</button>
+    <button class="join-button">Join</button>
+    <button class="tweet-button">Tweet</button>
+</body>
+</html>
