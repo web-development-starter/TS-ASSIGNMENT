@@ -3,63 +3,362 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Curriculum Vitae</title>
-</head>
-<body>
-    <h1>OGHENERO PRINCE</h1>
-    <h3>HTML DEVELOPER</h3>
-    <hr>
-     <p>phone: +234-912-792-6007</p>
-     <p>Email: ogheneroprince5@gmail.com</p>
-     <p>Off ozoro-road ellu, DELTA-STATE. NIGERIA.</p>
-     <hr>
-     <h2>SUMMARY</h2>
-     <p>  I am a TS academy student from the department of fullstack software developer , with an ambition of creating and solving some I.T problem. i bring communication teamwork, leadership skills cultivated by my experience as a programer. excited to learn and horn my skill as a software developer. </p>
-     <hr>
-     <h2>
-        EDUCATIONAL QUALIFICATION
-     </h2>
-     <ul>
-        <li>N.D IN MECHANICAL ENGINEERING FROM DELTA-STATE POLYTECHNIC OZORO---2021</li>
+    <title>Student Webpage</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            outline: none;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .container{
+            height: 100vh;
+            background-image: url(./photogrid/student.jpeg);
+            background-position: center;
+            background-size: cover;
+        }
+        header{
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgb(252, 251, 249);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+        }
+        .fa-globe{
+            display: inline-block;
+            color: green;
+            font-size: 30px;
+        }
+        header h1{
+            margin: 0px;
+            display: inline-block;
+            color: #1a1a1a;
+        }
+        ul{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            list-style: none;
+            padding: 0px;
+            margin: 0px;
+        }
+        ul a{
+            text-transform: capitalize;
+            font-size: 18px;
+            font-weight:bold ;
+            text-decoration: none;
+            margin: auto 30px;
+            color: #1a1a1a;
+            position: relative;
+            transform: scaleX(0);
+            transition: transform 0.3s ease-in-out;
+        }
+        ul a:hover::after{
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            height: 2px;
+            width: 100%;
+            background-color: #1a1a1a;
+            transform: scaleX(1);
+        }
+        button{
+            width: 40px;
+            height: 40px;
+            background-color: green;
+            border: none;
+            border-radius: 30px;
+        }
+        .fa-bars{
+            font-size: 24px;
+            color:  green;
+            display: none;
+        }
+        .main{
+            text-align: center;
+            margin: 50px auto;
+        }
+        .main h1{
+            text-transform: capitalize;
+            margin: 0px;
+            padding-top: 30px;
+            font-size: 60px;
+        }
+        .main p{
+            margin: 10px auto;
+            width: 400px;
 
-        <li>H.N.D IN MECHANICAL ENGINEERING FROM DELTA-STATE POLYTECHNIC OQWASHI-UKU----2024</li>
+        }
+        .search{
+            display: flex;
+            margin: 0px auto;
+            background-color: aliceblue;
+            border-radius: 50px;
+            max-width: 50%;
+            height: 40px;
+        }
+        .fa-search{
+            font-size: 25px;
+            margin: auto 2px;
+            padding: 5px;
+            background-color:green;
+            border-radius: 50%;
+        }
+        .fa-map-marker{
+             font-size: 25px;
+            margin: auto 2px;
+            padding: 5px;
+        }
+        input{
+            background-color: none;
+            width: 100%;
+            border: none;
+            font-size: 18px;
+            outline: none;
+        }
+        .features{
+            display: flex;
+            justify-content: space-around;
+            background-color: green;
+        }
+        .features .top{
+            display: flex;
+            align-items: center;
+            width: 150px;
+            padding: 10px 0px;
+        }
+        .features i{
+            color:rgb(216, 185, 7);
+            margin-right: 4px;
+        }
+        .pad{
+              width: 250px;
+        }
+        h4{
+            margin: 0px;
+        }
+        p{
+            margin-top: 8px;
+        }
 
-        <li>SOFTWARE DEVELOPER--- ONGOING(2025)</li>
-     </ul>
-     <hr>
-     <h2>SKILL</h2>
-     <ul>
-        <li>Creative thinking and critical problem solving</li>
+        .medium{
+            padding: 70px;
+            text-align: center;
+            background-color: black;
+        }
+        .medium h3{
+            margin: 0px;
+            font-size: 32px;
+            color: aliceblue;
+            text-transform: capitalize;
+        }
+        .medium p{
+            color: aliceblue;
+            font-size: 14px;
+            width: 300px;
+            margin: 10px auto;
+            margin-bottom: 30px;
+        }
+        .medium a{
+            border: 1px solid aliceblue;
+            text-decoration: none;
+            padding: 6px;
+            border-radius: 40px;
+            color: aliceblue;
+        }
+        .medium a:hover{
+            background-color: gold;
+            color: black;
+            font-weight: bold;
+        }
 
-        <li>Good communicator</li>
+        @media (max-width: 925px) {
+            
+            header h1{
+                
+                font-size: 24px;            
+        }
+        li a{
+            margin: auto 15px;
+            font-size: 16px;
+        }
+    }
 
+    @media (max-width: 700px) {
+        .fa-globe{
+                font-size: 20px;
+            }
+        header h1{        
+                font-size: 18px;            
+        }
+        li a{
+            margin: auto 10px;
+            font-size: 13px;
+        }
+        p{
+            font-size: 13px;
+        }
+    }
+    @media screen and (max-width: 450px) {
+        .center{
+            position: absolute;
+            top: 50px;
+            bottom: 0px;
+            right: -1000px;
+            width: 200px;
+            background-color: rgba(36, 226, 36, 0.8);
+            transition: right 0.3s ease-in-out;
+            height: 100vh;
+            backdrop-filter: blur(400px) brightness(80%);
+        }
         
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>Javascript</li>
-     </ul>
-     <hr>
-     <h2>PROJECT</h2>
-     <ul>
-        <li>Building responsive website</li>
-        <li>building a website with response to different screen size</li>
-        <li>building web with html,css and Javascript</li>
-     </ul>
-     <hr>
-     <h2>GOAL</h2>
-     <ol>
-        <li>solving real life problem using software development</li>
-        <li>working,improving and growing as a team</li>
-     </ol>
-     <hr>
-     <h2>REFERENCE</h2>
-     <h5> MR. ADESE ADAVANU</h5>
-     <p>Tel: +234 705-152-5082</p>
-     <h5> MRS. OGHENERO JUSTINA</h5>
-     <p>Tel: +234 915-768-6089</p>
-     
+        .center.active{
+            right: 0px;
+        }       
+        ul {
+            margin: 0px;
+            padding: 0px;
+            display: flex;
+            flex-direction: column;
+        }
+        li{
+            width: 100%;
+             padding: 30px 0px;
+             cursor: pointer;
+             border-bottom: 1px solid;
+            transition: background-color 0.3s ease-in-out;
+        }
+        a{
+            margin: 0px;
+            font-size: 18px;
+            color: aliceblue;
+        }
+        li:hover{
+            background-color: #1a1a1a;
+            color: aliceblue;
+        }
+        button{
+            width: 100%;
+            padding: 30px 0px;
+            height: 40px;
+            border-radius: 2px;
+            border: none;
+            cursor: pointer;
+            background: rgb(22, 179, 56);
+            transition: backgroud-color 0.3s ease-in-out;
+        }
+        button:hover{
+            background-color: rgba(4, 88, 4, 0.667);
+        }
+        .fa-bars{
+            display: block;
+        }
+        .features{
+            display: block;
+            margin: 0px;    
+        }
+        .pad{
+              padding: 10px;
+              width: 100%;
+              border-bottom: 1px solid #1a1a1a;
+        }
+        .medium a{
+            font-size: 12px;
+        }
+    }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+    <header>
+        <div class="left">
+            <i class="fa-solid fa-globe" aria-hidden="true"></i>
+            <h1>PriNCE</h1>
+        </div>
+        <div class="center">
+            
+        <ul>
+            <li><a href="#">home</a></li>
+            <li><a href="#">features</a></li>
+            <li><a href="#">medium</a></li>
+            <li><a href="#">process</a></li>
+            <li><a href="#">contact</a></li>
+            <button>P</button>    
+        </ul>
+        
+        </div>
+        <div class="end">
+            <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </div>
+        
+    </header>
+    
+    <section class="main" id="home">
+        <h1>see the world like a local</h1>
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur et voluptates repellat dolor nisi, consequuntur sin</p>
+        <div class="search">
+            <i class="fa-solid fa-map-marker"></i>
+            <input type="text">
+            <i class="fa-solid fa-search"></i>
+        </div>
+    </section>
+    <section class="features" id="features">
+        <div class="pad">
+            <div class="top">
+                <i class="fa fa-hand"></i>
+                <h4>hand picked guides</h4>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est sapiente</p>
+        </div>
+         <div class="pad">
+            <div class="top">
+                <i class="fa-solid fa-headset"></i>
+                <h4>24/7 support</h4>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est sapiente</p>
+        </div>
+         <div class="pad">
+            <div class="top">
+                <i class="fa-solid fa-person"></i>
+                <h4>private tours</h4>
+            </div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est sapiente</p>
+        </div>
+    </section>
+    <section class="medium" id="medium">
+        <h3>see the world like a local</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+        <a href="#">All</a>
+        <a href="#">Regular</a>
+        <a href="#">popular</a>
+        <a href="#">trending</a>
+    </section>
+
+    </div>
+
+        <script>
+            let menuBar = document.querySelector('.fa-bars');
+
+            let center = document.querySelector('.center');
+
+            menuBar.addEventListener('click', () => {
+                center.classList.toggle('active');
+                menuBar.style.color = 'rgb(4, 88, 4)';
+            });
+            
+            window.onscroll = () => {
+                center.classList.remove('active')
+            }
+    </script>
 </body>
 </html>
-
-
-
